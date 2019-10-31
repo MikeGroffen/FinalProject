@@ -17,12 +17,20 @@ namespace final_project
             InitializeComponent();
         }
 
+        //toevoegen aan mandje product 1
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("ggg");
         }
 
+        //aantal product 1 invul box
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //link voor productinfo 1
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
