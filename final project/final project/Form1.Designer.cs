@@ -37,7 +37,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // product 1 button
             // 
             this.button1.Location = new System.Drawing.Point(611, 12);
             this.button1.Name = "button1";
@@ -47,14 +47,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // product 1 textBox
             // 
             this.textBox1.Location = new System.Drawing.Point(562, 24);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(22, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // label1
+            // product 1 label
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(504, 27);
@@ -63,7 +63,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Aantal:";
             // 
-            // pictureBox1
+            // product 1 pictureBox
             // 
             this.pictureBox1.Image = global::final_project.Properties.Resources.Duck;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
@@ -72,7 +72,7 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // produduct 1 titel label 
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(123, 12);
@@ -81,7 +81,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Eendenhoofd";
             // 
-            // linkLabel1
+            // product 1 linkLabel naar txt file
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(138, 52);
