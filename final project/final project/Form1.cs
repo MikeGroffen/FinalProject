@@ -22,11 +22,12 @@ namespace final_project
         private void button1_Click(object sender, EventArgs e)
         {
             int parsedValue;
-
+            SaleLinesItem s = new SaleLinesItem();
             // kijken of het textbox aantal wel een nummer bevat
             if (int.TryParse(textBox1.Text, out parsedValue))
             {
                 MessageBox.Show(textBox1.Text.ToString() + " item(s) toegevoegd aan winkelmandje!");
+                s.productline(textBox1.Text.ToString(), "Eendenhoofd", "productinformatie over dat hoofd, dit kan nog generiker en dat ga ik dus later nog doen.");
             }
             else
             {
@@ -34,6 +35,7 @@ namespace final_project
             }
 
             //hier programma aanroepen dat winkelmandje enz gooit..
+            
         }
 
         
@@ -45,7 +47,17 @@ namespace final_project
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //stuur ze door naar de productinformatie.
-            MessageBox.Show("productinformatie, moeten we uit een text file halen ofzo, maar ja dat kan dus hier ;p");
+            MessageBox.Show("productinformatie van het eendenhoofd. tis een fysiek product, geen idee wat je er mee moet. weegt 688 Kg. zwaar hoofd..");
+        }
+
+        //winkelmandje knop
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Winkelmandje w = new Winkelmandje();
+            w.showwinkelwagen();
+            SaleLinesItem s = new SaleLinesItem();
+            s.ttest();
+
         }
     }
 }
