@@ -20,19 +20,20 @@ namespace final_project
         //toevoegen aan mandje product 1
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ggg");
+            MessageBox.Show("Item(s) toegevoegd aan winkelmandje!");
+            //hier programma aanroepen dat winkelmandje enz gooit..
         }
 
         //aantal product 1 invul box
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //hier verkrijg je de hoeveelheid dat ze willen
         }
 
         //link voor productinfo 1
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            //stuur ze door naar de productinformatie.
         }
     }
 }
