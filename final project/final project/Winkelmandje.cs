@@ -10,13 +10,19 @@ namespace final_project
 {
     class Winkelmandje
     {
+        List<SaleLinesItem> productdb = new List<SaleLinesItem>();
+
+        public void addtochart(string aantal, string product, string productdetails)
+        {
+            productdb.Add(new SaleLinesItem(aantal, product, productdetails));
+        }
+
         public void showwinkelwagen()
         {
-            SaleLinesItem s = new SaleLinesItem();
-            string items = "";
-            foreach (productdatabase product in s.productdb)
-            { items = items + "Aantal: " + product.aantal + "ProductNaam: " + product.productnaam + "ProductDetails: " + product.productdetails + "\n";  Debug.WriteLine(product.aantal); } 
-            MessageBox.Show(items);
+            string items = ""; 
+            foreach (SaleLinesItem product in productdb)
+            { items = items + "ProductNaam: " + product.productnaam + "\n" + "Aantal: " + product.aantal + "\n" + "ProductDetails: " + product.productdetails + "\n" + "\n";} 
+            MessageBox.Show(items );
         }
     }
 }

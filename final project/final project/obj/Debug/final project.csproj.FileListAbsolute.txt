@@ -18,3 +18,5 @@ C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final p
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.csproj.CoreCompileInputs.cache
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.exe
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.pdb
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Gebruiker.resources
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Sales.resources

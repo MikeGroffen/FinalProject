@@ -13,51 +13,85 @@ namespace final_project
 {
     public partial class Form1 : Form
     {
+        Winkelmandje w = new Winkelmandje();
+        Gebruiker g = new Gebruiker();
+        Product p = new Product();
+
         public Form1()
         {
             InitializeComponent();
+            p.product();
+            datagrid();
         }
 
-        //toevoegen aan mandje product 1
-        private void button1_Click(object sender, EventArgs e)
+        private void datagrid()
+        {
+            dataGridView3.ColumnCount = 3;
+            dataGridView3.Columns[0].Name = "Productnaam";
+            dataGridView3.Columns[1].Name = "ProductBeschrijving";
+            dataGridView3.Columns[2].Name = "Prijs";
+
+            foreach (ProductInformatie productinfo in p.producten)
+            {
+                dataGridView3.Rows.Add(productinfo.titel, productinfo.beschrijving, productinfo.prijs);
+            }
+
+            DataGridViewTextBoxColumn txtbox = new DataGridViewTextBoxColumn();
+            dataGridView3.Columns.Add(txtbox);
+            txtbox.HeaderText = "Aantal";
+            txtbox.Name = "txtbox";
+
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            dataGridView3.Columns.Add(btn);
+            btn.HeaderText = "Toevoegen aan winkelmandje";
+            btn.Text = "toevoegen aan winkelmandje";
+            btn.Name = "btn";
+            btn.UseColumnTextForButtonValue = true;
+            
+            dataGridView3.Columns[0].ReadOnly = true;
+            dataGridView3.Columns[1].ReadOnly = true;
+            dataGridView3.Columns[2].ReadOnly = true;
+
+            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int parsedValue;
-            SaleLinesItem s = new SaleLinesItem();
-            // kijken of het textbox aantal wel een nummer bevat
-            if (int.TryParse(textBox1.Text, out parsedValue))
+            if(e.ColumnIndex == 4 && e.RowIndex != p.producten.Count + 1)
             {
-                MessageBox.Show(textBox1.Text.ToString() + " item(s) toegevoegd aan winkelmandje!");
-                s.productline(textBox1.Text.ToString(), "Eendenhoofd", "productinformatie over dat hoofd, dit kan nog generiker en dat ga ik dus later nog doen.");
-            }
-            else
-            {
-                MessageBox.Show("ongeldig aantal!");
-            }
+                if (dataGridView3.Rows[e.RowIndex].Cells[3].Value == null) { }
+                else
+                {
+                    string value = dataGridView3.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-            //hier programma aanroepen dat winkelmandje enz gooit..
-            
+                    // kijken of het textbox aantal wel een nummer bevat
+                    if (int.TryParse(value, out parsedValue))
+                    {
+                        MessageBox.Show(value + " item(s) toegevoegd aan winkelmandje!");
+                        w.addtochart(value, p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ongeldig aantal!");
+                    }
+                }
+            }
         }
-
         
-        private void Form1_Load(object sender, EventArgs e)
-        { 
-        }
-
-        //link voor productinfo 1
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //stuur ze door naar de productinformatie.
-            MessageBox.Show("productinformatie van het eendenhoofd. tis een fysiek product, geen idee wat je er mee moet. weegt 688 Kg. zwaar hoofd..");
-        }
-
         //winkelmandje knop
         private void button2_Click(object sender, EventArgs e)
         {
-            Winkelmandje w = new Winkelmandje();
             w.showwinkelwagen();
-            SaleLinesItem s = new SaleLinesItem();
-            s.ttest();
-
         }
+
+        //betalen knop, bij klikken op deze knop moet de gebruiker eerst gegevens invullen alvorens de betaling word gestart.
+        private void button3_Click(object sender, EventArgs e)
+        {
+            g.Show();
+            this.Visible = false;
+        }
+
+       
     }
 }
