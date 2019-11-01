@@ -48,14 +48,14 @@
   <ItemGroup>
     <Compile Include="Betaling.cs" />
     <Compile Include="CreditCard.cs" />
-    <Compile Include="DigitaleProductinfo.cs" />
+    <Compile Include="Digitaleverzending.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FysiekeProductinfo.cs" />
+    <Compile Include="Fysiekeverzending.cs" />
     <Compile Include="Gebruiker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +75,15 @@
     <Compile Include="Sales.Designer.cs">
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerificatieEmail.cs" />
+    <Compile Include="Verzending.cs" />
     <Compile Include="Verzendingsinformatie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Verzendingsinformatie.Designer.cs">
       <DependentUpon>Verzendingsinformatie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Verzendingsinterface.cs" />
     <Compile Include="Winkelmand.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace final_project
 {
-    class Verzendingsinterface
+    public abstract class Verzendingsinterface
     {
+        abstract public void StuurEmail();
     }
 }

@@ -17,11 +17,11 @@ namespace final_project
             DialogResult result = MessageBox.Show("Totaalprijs: " + prijs + "\n" + message, title, buttons);
             if (result == DialogResult.Yes)
             {
-
+                Verzendingsinterface verzend = base.verzending(0);
+                verzend.StuurEmail();
             }
             else
             {
-                //winkelmandje moet een form worden....
                 Winkelmandje w = new Winkelmandje();
                 w.showwinkelwagen();
             }

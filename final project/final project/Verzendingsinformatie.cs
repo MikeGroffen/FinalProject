@@ -20,7 +20,9 @@ namespace final_project
         //verder knop
         private void button1_Click(object sender, EventArgs e)
         {
-            Sales.ActiveForm.Show();
+            this.Visible = false;
+            Sales s = new Sales();
+            s.Show();
         }
 
         //terug naar store knop
