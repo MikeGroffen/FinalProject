@@ -17,16 +17,28 @@ namespace final_project
             InitializeComponent();
         }
 
+        //verder knop
         private void button1_Click(object sender, EventArgs e)
         {
             gebruiker();
             MessageBox.Show("Welkom " + voornaam + " " + achternaam);
-            if(true)
+            bool bevatfysiekproduct = false;
+            foreach (SaleLinesItem product in Winkelmandje.productdb)
+            {
+                if (product.producttype == "Fysiek") { bevatfysiekproduct = true; }
+            }
+
+            if (bevatfysiekproduct)
+            {
+                this.Visible = false;
+                Verzendingsinformatie v = new Verzendingsinformatie();
+                v.Show();
+            }
+            else
             {
                 Sales sale = new Sales();
                 sale.Show();
             }
-            else { }// hier gaan we gelijk door naar de betaling omdat het alleen digitale producten bevat
             this.Visible = false;
         }
 
@@ -43,10 +55,9 @@ namespace final_project
             email = textBox4.Text.ToString();
         }
 
+        //terug knop
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.Show();
             this.Visible = false;
         }
     }

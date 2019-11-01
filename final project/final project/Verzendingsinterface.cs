@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace final_project
 {
-    public abstract class Betaling
+    class Verzendingsinterface
     {
-        public abstract void Betaalmethode(float prijs);
     }
 }

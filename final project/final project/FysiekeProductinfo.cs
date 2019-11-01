@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace final_project
 {
-    class ProductInformatie
+    class FysiekeProductinfo
     {
         public string titel;
         public string beschrijving;
         public float prijs;
-        public string type;
 
-        public ProductInformatie(string titel1, string beschrijving1, float prijs1, string type1)
+        public FysiekeProductinfo(string titel1, string beschrijving1, float prijs1)
         {
             titel = titel1;
             beschrijving = beschrijving1;
             prijs = prijs1;
-            type = type1;
         }
     }
 }

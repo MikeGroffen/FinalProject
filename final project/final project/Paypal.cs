@@ -9,12 +9,12 @@ namespace final_project
 {
     class Paypal : Betaling
     {
-        public override void Betaalmethode()
+        public override void Betaalmethode(float prijs)
         {
             string message = "Kies of de betaling succesvol is of niet. ja voor succesvol, nee voor gefaald.";
             string title = "Paypal";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
+            DialogResult result = MessageBox.Show("Totaalprijs: " + prijs + "\n" + message, title, buttons);
             if (result == DialogResult.Yes)
             {
 
@@ -25,6 +25,7 @@ namespace final_project
                 Winkelmandje w = new Winkelmandje();
                 w.showwinkelwagen();
             }
+            Sales.ActiveForm.Close();
         }
     }
 }

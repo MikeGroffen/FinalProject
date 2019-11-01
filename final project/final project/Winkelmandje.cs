@@ -10,11 +10,11 @@ namespace final_project
 {
     class Winkelmandje
     {
-        List<SaleLinesItem> productdb = new List<SaleLinesItem>();
+        public static List<SaleLinesItem> productdb = new List<SaleLinesItem>();
 
-        public void addtochart(string aantal, string product, string productdetails)
+        public void addtochart(string aantal, string product, string productdetails, float prijs, string producttype)
         {
-            productdb.Add(new SaleLinesItem(aantal, product, productdetails));
+            productdb.Add(new SaleLinesItem(aantal, product, productdetails, prijs, producttype));
         }
 
         public void showwinkelwagen()
