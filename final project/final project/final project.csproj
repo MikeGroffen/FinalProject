@@ -90,7 +90,6 @@
     <Compile Include="Winkelmand.Designer.cs">
       <DependentUpon>Winkelmand.cs</DependentUpon>
     </Compile>
-    <Compile Include="Winkelmandje.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Verzendingsinformatie.resx">
       <DependentUpon>Verzendingsinformatie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winkelmand.resx">
+      <DependentUpon>Winkelmand.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\ProductInformatie.datasource" />
     <None Include="Properties\Settings.settings">

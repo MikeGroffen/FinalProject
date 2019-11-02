@@ -9,20 +9,25 @@ namespace final_project
 {
     class Digitaleverzending : Verzending
     {
-        public Digitaleverzending(Verzendingsinterface verz) : base(verz)
-        {
+        private string titel;
+        private string downloadlink;
 
+
+        public Digitaleverzending(Verzendingsinterface verz, SaleLinesItem product) : base(verz)
+        {
+            titel = product.productnaam;
+            downloadlink = product.downloadlink;
         }
 
         public override void StuurEmail()
         {
             base.StuurEmail();
-            MessageBox.Show(digitaleverzendingsinfo());//"Digitale verzendings informatie voor gebruiker");
+            MessageBox.Show(digitaleverzendingsinfo(),"Email voor gebruiker van digitale product");
         }
 
         public string digitaleverzendingsinfo()
         {
-            return "Downloadlink: "+ "" + "Key: " + base.stringgenerator();
+            return titel + "\n" + "Downloadlink: " + downloadlink +"\n" + "Key: " + base.stringgenerator();
         }
     }
 }

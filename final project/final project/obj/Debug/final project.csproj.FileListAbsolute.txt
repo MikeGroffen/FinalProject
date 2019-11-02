@@ -21,3 +21,4 @@ C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final p
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Gebruiker.resources
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Sales.resources
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Verzendingsinformatie.resources
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Winkelmand.resources

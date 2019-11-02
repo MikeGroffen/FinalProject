@@ -15,14 +15,16 @@ namespace final_project
         public string productdetails { get; set; }
         public float prijs { get; set; }
         public string producttype { get; set; }
+        public string downloadlink { get; set; }
 
-        public SaleLinesItem(string aantal1, string productnaam1, string productdetails1, float prijs1, string producttype1)
+        public SaleLinesItem(string aantal1, string productnaam1, string productdetails1, float prijs1, string producttype1, string downloadlink1)
         {
             aantal = aantal1;
             productnaam = productnaam1;
             productdetails = productdetails1;
             prijs = prijs1;
             producttype = producttype1;
+            downloadlink = downloadlink1;
         }
 
         public float quantitypricecalc ()

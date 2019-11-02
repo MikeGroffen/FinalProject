@@ -23,7 +23,7 @@ namespace final_project
         {
             float totaalbedrag = 0;
             bool verzendingskosten = false;
-            foreach(SaleLinesItem product in Winkelmandje.productdb)
+            foreach(SaleLinesItem product in Winkelmand.productdb)
             {
                 if (product.producttype == "Fysiek") { verzendingskosten = true; }
                totaalbedrag += product.quantitypricecalc();

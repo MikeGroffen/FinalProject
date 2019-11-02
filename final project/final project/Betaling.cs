@@ -13,15 +13,15 @@ namespace final_project
         //kijkt of we digitale of fysieke producten hebben creert nieuwe decoratorconstrucor dysiek of digitaal. begint met constructor verificatieEmail.
         public Verzendingsinterface verzending(int i)
         {
-            if (i < Winkelmandje.productdb.Count)
+            if (i < Winkelmand.productdb.Count)
             {
-                if (Winkelmandje.productdb[i].producttype == "Fysiek")
+                if (Winkelmand.productdb[i].producttype == "Fysiek")
                 {
-                    return new Fysiekeverzending(verzending(i + 1));
+                    return new Fysiekeverzending(verzending(i + 1),Winkelmand.productdb[i]);
                 }
-                if (Winkelmandje.productdb[i].producttype == "Digitaal")
+                if (Winkelmand.productdb[i].producttype == "Digitaal")
                 {
-                    return new Digitaleverzending(verzending(i + 1));
+                    return new Digitaleverzending(verzending(i + 1), Winkelmand.productdb[i]);
                 }
             }
             return new VerificatieEmail();

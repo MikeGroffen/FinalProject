@@ -23,7 +23,7 @@ namespace final_project
             }
             else
             {
-                Winkelmandje w = new Winkelmandje();
+                Winkelmand w = new Winkelmand();
                 w.showwinkelwagen();
             }
             Sales.ActiveForm.Close();

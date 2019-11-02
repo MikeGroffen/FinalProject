@@ -13,7 +13,7 @@ namespace final_project
 {
     public partial class Form1 : Form
     {
-        Winkelmandje w = new Winkelmandje();
+        Winkelmand w = new Winkelmand();
         Gebruiker g = new Gebruiker();
         Product p = new Product();
 
@@ -60,7 +60,7 @@ namespace final_project
         {
             int parsedValue;
 
-            //checkt of colum nummer 4 is, check of de rowindex waar we op klikken binnen de grenzen vaan de producten list is
+            //checkt of colum nummer 5 is, check of de rowindex waar we op klikken binnen de grenzen vaan de producten list is
             if(e.ColumnIndex == 5 && e.RowIndex != p.producten.Count + 1 && e.RowIndex != -1)
             {
                 if (dataGridView3.Rows[e.RowIndex].Cells[4].Value == null) { }
@@ -71,12 +71,16 @@ namespace final_project
                     // kijken of het textbox aantal wel een nummer bevat
                     if (int.TryParse(value, out parsedValue))
                     {
-                        MessageBox.Show(value + " item(s) toegevoegd aan winkelmandje!");
-                        w.addtochart(value, p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type);
+                        if (int.Parse(value) > 0)
+                        {
+                            MessageBox.Show(value + " item(s) toegevoegd aan winkelmandje!");
+                            w.addtochart(value, p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type, p.producten[e.RowIndex].downloadlink);
+                        }
+                        else MessageBox.Show("Ongeldig aantal. \n Aantal mag niet 0 of kleiner zijn!");
                     }
                     else
                     {
-                        MessageBox.Show("ongeldig aantal!");
+                        MessageBox.Show("Ongeldig aantal!");
                     }
                 }
             }
@@ -85,6 +89,7 @@ namespace final_project
         //winkelmandje knop
         private void button2_Click(object sender, EventArgs e)
         {
+            w.Visible = true;
             w.showwinkelwagen();
         }
 
