@@ -56,12 +56,13 @@ namespace final_project
             _betaling.Betaalmethode(TotalPricecalc());
         }
 
-        //sluit de window en brengt je terug naar store
+        //terug knop
         private void button4_Click(object sender, EventArgs e)
         {
             this.Visible = false;
         }
 
+        //wijzig gegevens knop
         private void button5_Click(object sender, EventArgs e)
         {
             Gebruiker g = new Gebruiker();

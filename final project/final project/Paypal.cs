@@ -11,7 +11,7 @@ namespace final_project
     {
         public override void Betaalmethode(float prijs)
         {
-            string message = "Kies of de betaling succesvol is of niet. ja voor succesvol, nee voor gefaald.";
+            string message = "Kies of de betaling geslaagd is of niet. ja voor geslaagd, nee voor gefaald.";
             string title = "Paypal";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("Totaalprijs: " + prijs + "\n" + message, title, buttons);

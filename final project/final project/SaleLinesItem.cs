@@ -10,12 +10,12 @@ namespace final_project
 {
     class SaleLinesItem
     {
-        public string aantal { get; set; }
-        public string productnaam { get; set; }
+        public string aantal         { get; set; }
+        public string productnaam    { get; set; }
         public string productdetails { get; set; }
-        public float prijs { get; set; }
-        public string producttype { get; set; }
-        public string downloadlink { get; set; }
+        public float  prijs          { get; set; }
+        public string producttype    { get; set; }
+        public string downloadlink   { get; set; }
 
         public SaleLinesItem(string aantal1, string productnaam1, string productdetails1, float prijs1, string producttype1, string downloadlink1)
         {

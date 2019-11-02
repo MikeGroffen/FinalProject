@@ -23,6 +23,7 @@ namespace final_project
             gebruiker();
             MessageBox.Show("Welkom " + voornaam + " " + achternaam);
             bool bevatfysiekproduct = false;
+
             foreach (SaleLinesItem product in Winkelmand.productdb)
             {
                 if (product.producttype == "Fysiek") { bevatfysiekproduct = true; }

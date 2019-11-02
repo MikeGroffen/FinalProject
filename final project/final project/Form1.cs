@@ -63,7 +63,7 @@ namespace final_project
             //checkt of colum nummer 5 is, check of de rowindex waar we op klikken binnen de grenzen vaan de producten list is
             if(e.ColumnIndex == 5 && e.RowIndex != p.producten.Count + 1 && e.RowIndex != -1)
             {
-                if (dataGridView3.Rows[e.RowIndex].Cells[4].Value == null) { }
+                if (dataGridView3.Rows[e.RowIndex].Cells[4].Value == null) { MessageBox.Show("Vul een aantal in!"); }
                 else
                 {
                     string value = dataGridView3.Rows[e.RowIndex].Cells[4].Value.ToString();

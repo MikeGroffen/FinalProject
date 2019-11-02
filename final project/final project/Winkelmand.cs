@@ -25,6 +25,7 @@ namespace final_project
             productdb.Add(new SaleLinesItem(aantal, product, productdetails, prijs, producttype, downloadlink));
         }
 
+        //laad de tabel met de producten in de winkelwagen
         public void showwinkelwagen()
         {
             datagrid();
@@ -42,9 +43,7 @@ namespace final_project
             {
                 dataGridView1.Rows.Add(productinfo.productnaam, productinfo.productdetails, productinfo.prijs, productinfo.producttype);
             }
-
-           
-
+            
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             dataGridView1.Columns.Add(btn);
             btn.HeaderText = "Verwijderen uit winkelmandje";
@@ -59,6 +58,7 @@ namespace final_project
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        //methode voor wat er gebeurt als de gebruiker op de verwijder uit winkelmand knop klikt
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 4 && e.RowIndex != productdb.Count + 1 && e.RowIndex != -1)
@@ -72,6 +72,7 @@ namespace final_project
             }
         }
 
+        //winkelmand sluiten knop
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
