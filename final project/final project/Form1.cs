@@ -96,7 +96,9 @@ namespace final_project
         //betalen knop, bij klikken op deze knop moet de gebruiker eerst gegevens invullen alvorens de betaling word gestart.
         private void button3_Click(object sender, EventArgs e)
         {
-            g.Show();
+            if (Winkelmand.productdb.Count == 0)
+            { MessageBox.Show("Geen producten in winkelmandje! \n Voeg eerst producten toe aan u winkelmandje alvorens u verder gaat."); }
+            else g.Show();
         }
 
        

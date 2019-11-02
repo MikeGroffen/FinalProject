@@ -22,7 +22,15 @@ namespace final_project
 
         public void addtochart(string aantal, string product, string productdetails, float prijs, string producttype, string downloadlink)
         {
-            productdb.Add(new SaleLinesItem(aantal, product, productdetails, prijs, producttype, downloadlink));
+            //kijkt of we het product al in het winkelmandje hebben, zoja verhoog aantal met nieuwe aantal
+            if (productdb.Exists(x => x.productnaam.Contains(product)))
+            {
+                productdb.Find(x => x.productnaam.Contains(product)).aantal = (int.Parse(productdb.Find(x => x.productnaam.Contains(product)).aantal) + int.Parse(aantal)).ToString();
+            }
+            else
+            {
+                productdb.Add(new SaleLinesItem(aantal, product, productdetails, prijs, producttype, downloadlink));
+            }
         }
 
         //laad de tabel met de producten in de winkelwagen
@@ -33,15 +41,16 @@ namespace final_project
 
         private void datagrid()
         {
-            dataGridView1.ColumnCount = 4;
+            dataGridView1.ColumnCount = 5;
             dataGridView1.Columns[0].Name = "Productnaam";
             dataGridView1.Columns[1].Name = "ProductBeschrijving";
             dataGridView1.Columns[2].Name = "Prijs";
             dataGridView1.Columns[3].Name = "Type";
+            dataGridView1.Columns[4].Name = "Aantal";
 
             foreach (SaleLinesItem productinfo in productdb)
             {
-                dataGridView1.Rows.Add(productinfo.productnaam, productinfo.productdetails, productinfo.prijs, productinfo.producttype);
+                dataGridView1.Rows.Add(productinfo.productnaam, productinfo.productdetails, productinfo.prijs, productinfo.producttype,productinfo.aantal);
             }
             
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -55,15 +64,16 @@ namespace final_project
             dataGridView1.Columns[1].ReadOnly = true;
             dataGridView1.Columns[2].ReadOnly = true;
             dataGridView1.Columns[3].ReadOnly = true;
+            dataGridView1.Columns[4].ReadOnly = true;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         //methode voor wat er gebeurt als de gebruiker op de verwijder uit winkelmand knop klikt
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4 && e.RowIndex != productdb.Count + 1 && e.RowIndex != -1)
+            if (e.ColumnIndex == 5 && e.RowIndex != productdb.Count + 1 && e.RowIndex != -1)
             {
-                if (dataGridView1.Rows[e.RowIndex].Cells[4].Value == null) { }
+                if (dataGridView1.Rows[e.RowIndex].Cells[5].Value == null) { }
                 else
                 {
                     productdb.RemoveAt(e.RowIndex);
