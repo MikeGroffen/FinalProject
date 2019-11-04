@@ -8,17 +8,17 @@ C:\Users\mikeg\source\repos\final project\final project\obj\Debug\final project.
 C:\Users\mikeg\source\repos\final project\final project\obj\Debug\final project.csproj.CoreCompileInputs.cache
 C:\Users\mikeg\source\repos\final project\final project\obj\Debug\final project.exe
 C:\Users\mikeg\source\repos\final project\final project\obj\Debug\final project.pdb
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\bin\Debug\final project.exe.config
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\bin\Debug\final project.exe
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\bin\Debug\final project.pdb
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.csprojAssemblyReference.cache
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Form1.resources
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Properties.Resources.resources
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.csproj.GenerateResource.cache
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.csproj.CoreCompileInputs.cache
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.exe
-C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.pdb
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Gebruiker.resources
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Properties.Resources.resources
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Sales.resources
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Verzendingsinformatie.resources
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final_project.Winkelmand.resources
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.csproj.GenerateResource.cache
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.csproj.CoreCompileInputs.cache
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\bin\Debug\final project.exe.config
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\bin\Debug\final project.exe
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\bin\Debug\final project.pdb
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.exe
+C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\final project\obj\Debug\final project.pdb
