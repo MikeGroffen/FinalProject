@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    partial class Winkelmand : Form
+    public partial class Winkelmand : Form
     {
         public Winkelmand()
         {
             InitializeComponent();
         }
 
-        public static List<SaleLinesItem> productdb = new List<SaleLinesItem>();
+        public List<SaleLinesItem> productdb = new List<SaleLinesItem>();
 
         public void addtochart(string aantal, ProductInformatie product)// string product, string productdetails, float prijs, string producttype, string downloadlink)
         {
@@ -29,7 +29,7 @@ namespace final_project
             }
             else
             {
-                productdb.Add(new SaleLinesItem(aantal, product ));//product.titel, product.beschrijving, product.prijs, product.type, product.downloadlink));
+                productdb.Add(new SaleLinesItem(aantal, product ));
             }
         }
 

@@ -13,13 +13,16 @@ namespace final_project
 {
     public partial class Form1 : Form
     {
-        Winkelmand w = new Winkelmand();
-        Gebruiker g = new Gebruiker();
-        Product p = new Product();
+        Winkelmand w;
+        Gebruiker g;
+        Product p;
 
         public Form1()
         {
             InitializeComponent();
+            w = new Winkelmand();
+            //g = new Gebruiker(w.productdb);
+            p = new Product();
             p.product();
             datagrid();
         }
@@ -74,7 +77,7 @@ namespace final_project
                         if (int.Parse(value) > 0)
                         {
                             MessageBox.Show(value + " item(s) toegevoegd aan winkelmandje!");
-                            w.addtochart(value,p.producten[e.RowIndex] );// p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type, p.producten[e.RowIndex].downloadlink);
+                            w.addtochart(value,p.producten[e.RowIndex]);// p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type, p.producten[e.RowIndex].downloadlink);
                         }
                         else MessageBox.Show("Ongeldig aantal. \n Aantal mag niet 0 of kleiner zijn!");
                     }
@@ -96,9 +99,9 @@ namespace final_project
         //betalen knop, bij klikken op deze knop moet de gebruiker eerst gegevens invullen alvorens de betaling word gestart.
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Winkelmand.productdb.Count == 0)
+            if (w.productdb.Count == 0)
             { MessageBox.Show("Geen producten in winkelmandje! \n Voeg eerst producten toe aan u winkelmandje alvorens u verder gaat."); }
-            else g.Show();
+            else { g = new Gebruiker(w.productdb); g.Show(); }
         }
 
        

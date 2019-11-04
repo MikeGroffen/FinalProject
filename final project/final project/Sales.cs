@@ -13,17 +13,19 @@ namespace final_project
     public partial class Sales : Form
     {
         private Betaling _betaling;
+        List<SaleLinesItem> productendb;
 
-        public Sales()
+        public Sales(List<SaleLinesItem> productendb1)
         {
             InitializeComponent();
+            productendb = productendb1;
         }
 
-        public float TotalPricecalc()
+        private float TotalPricecalc(List<SaleLinesItem> productendb1)
         {
             float totaalbedrag = 0;
             bool verzendingskosten = false;
-            foreach(SaleLinesItem product in Winkelmand.productdb)
+            foreach(SaleLinesItem product in productendb1)
             {
                 if (product.producttype == "Fysiek") { verzendingskosten = true; }
                totaalbedrag += product.quantitypricecalc();
@@ -39,21 +41,21 @@ namespace final_project
         private void button1_Click(object sender, EventArgs e)
         {
             _betaling = new Paypal();
-            _betaling.Betaalmethode(TotalPricecalc());
+            _betaling.Betaalmethode(TotalPricecalc(productendb),productendb);
         }
 
         //de pinpas knop
         private void button2_Click(object sender, EventArgs e)
         {
             _betaling = new Pinpas();
-            _betaling.Betaalmethode(TotalPricecalc());
+            _betaling.Betaalmethode(TotalPricecalc(productendb),productendb);
         }
 
         //de creditcard knop
         private void button3_Click(object sender, EventArgs e)
         {
             _betaling = new CreditCard();
-            _betaling.Betaalmethode(TotalPricecalc());
+            _betaling.Betaalmethode(TotalPricecalc(productendb),productendb);
         }
 
         //terug knop
@@ -65,7 +67,7 @@ namespace final_project
         //wijzig gegevens knop
         private void button5_Click(object sender, EventArgs e)
         {
-            Gebruiker g = new Gebruiker();
+            Gebruiker g = new Gebruiker(productendb);
             g.Show();
             this.Visible = false;
         }

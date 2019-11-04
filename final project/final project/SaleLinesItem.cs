@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace final_project
 {
-    class SaleLinesItem
+    public class SaleLinesItem
     {
         public string aantal         { get; set; }
         public string productnaam    { get; set; }
@@ -17,7 +17,7 @@ namespace final_project
         public string producttype    { get; set; }
         public string downloadlink   { get; set; }
 
-        public SaleLinesItem(string aantal1, ProductInformatie product)//string productnaam1, string productdetails1, float prijs1, string producttype1, string downloadlink1)
+        public SaleLinesItem(string aantal1, ProductInformatie product)
         {
             aantal = aantal1;
             productnaam = product.titel;

@@ -8,20 +8,20 @@ namespace final_project
 {
     public abstract class Betaling
     {
-        public abstract void Betaalmethode(float prijs);
+        public abstract void Betaalmethode(float prijs, List<SaleLinesItem> productend);
 
         //kijkt of we digitale of fysieke producten hebben creert nieuwe decoratorconstrucor dysiek of digitaal. begint met constructor verificatieEmail.
-        public Verzendingsinterface verzending(int i)
+        public Verzendingsinterface verzending(int i, List<SaleLinesItem> productendb)
         {
-            if (i < Winkelmand.productdb.Count)
+            if (i < productendb.Count)
             {
-                if (Winkelmand.productdb[i].producttype == "Fysiek")
+                if (productendb[i].producttype == "Fysiek")
                 {
-                    return new Fysiekeverzending(verzending(i + 1),Winkelmand.productdb[i]);
+                    return new Fysiekeverzending(verzending(i + 1,productendb),productendb[i]);
                 }
-                if (Winkelmand.productdb[i].producttype == "Digitaal")
+                if (productendb[i].producttype == "Digitaal")
                 {
-                    return new Digitaleverzending(verzending(i + 1), Winkelmand.productdb[i]);
+                    return new Digitaleverzending(verzending(i + 1, productendb), productendb[i]);
                 }
             }
             return new VerificatieEmail();

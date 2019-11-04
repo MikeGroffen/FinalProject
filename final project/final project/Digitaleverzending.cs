@@ -11,8 +11,7 @@ namespace final_project
     {
         private string titel;
         private string downloadlink;
-
-
+        
         public Digitaleverzending(Verzendingsinterface verz, SaleLinesItem product) : base(verz)
         {
             titel = product.productnaam;

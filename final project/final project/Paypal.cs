@@ -9,7 +9,7 @@ namespace final_project
 {
     class Paypal : Betaling
     {
-        public override void Betaalmethode(float prijs)
+        public override void Betaalmethode(float prijs, List<SaleLinesItem> productendb)
         {
             string message = "Kies of de betaling geslaagd is of niet. ja voor geslaagd, nee voor gefaald.";
             string title = "Paypal";
@@ -18,16 +18,16 @@ namespace final_project
             if (result == DialogResult.Yes)
             {
                 Sales.ActiveForm.Close();
-                Verzendingsinterface verzend = base.verzending(0);
+                Verzendingsinterface verzend = base.verzending(0, productendb);
                 verzend.StuurEmail();
             }
             else
             {
                 Sales.ActiveForm.Close();
                 Winkelmand w = new Winkelmand();
+                w.productdb = productendb;
                 w.Visible = true;
                 w.showwinkelwagen();
-                
             }
             
         }

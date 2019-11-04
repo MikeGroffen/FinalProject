@@ -12,17 +12,20 @@ namespace final_project
 {
     public partial class Verzendingsinformatie : Form
     {
-        public Verzendingsinformatie()
+        List<SaleLinesItem> productendb;
+
+        public Verzendingsinformatie(List<SaleLinesItem> productendb1)
         {
             InitializeComponent();
+            productendb = productendb1;
         }
 
         //verder knop
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Sales s = new Sales();
+            Sales s = new Sales(productendb);
             s.Show();
+            this.Visible = false;
         }
 
         //terug naar store knop

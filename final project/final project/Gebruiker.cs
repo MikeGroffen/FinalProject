@@ -12,9 +12,12 @@ namespace final_project
 {
     public partial class Gebruiker : Form
     {
-        public Gebruiker()
+        List<SaleLinesItem> productendb;
+
+        public Gebruiker(List<SaleLinesItem> productendb1)
         {
             InitializeComponent();
+            productendb = productendb1;
         }
 
         //verder knop
@@ -24,20 +27,19 @@ namespace final_project
             MessageBox.Show("Welkom " + voornaam + " " + achternaam);
             bool bevatfysiekproduct = false;
 
-            foreach (SaleLinesItem product in Winkelmand.productdb)
+            foreach (SaleLinesItem product in productendb)
             {
                 if (product.producttype == "Fysiek") { bevatfysiekproduct = true; }
             }
 
             if (bevatfysiekproduct)
             {
-                this.Visible = false;
-                Verzendingsinformatie v = new Verzendingsinformatie();
+                Verzendingsinformatie v = new Verzendingsinformatie(productendb);
                 v.Show();
             }
             else
             {
-                Sales sale = new Sales();
+                Sales sale = new Sales(productendb);
                 sale.Show();
             }
             this.Visible = false;

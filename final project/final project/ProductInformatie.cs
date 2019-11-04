@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace final_project
 {
-    class ProductInformatie
+    public class ProductInformatie
     {
         public string titel;
         public string beschrijving;
