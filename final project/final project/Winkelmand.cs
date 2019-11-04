@@ -20,16 +20,16 @@ namespace final_project
 
         public static List<SaleLinesItem> productdb = new List<SaleLinesItem>();
 
-        public void addtochart(string aantal, string product, string productdetails, float prijs, string producttype, string downloadlink)
+        public void addtochart(string aantal, ProductInformatie product)// string product, string productdetails, float prijs, string producttype, string downloadlink)
         {
             //kijkt of we het product al in het winkelmandje hebben, zoja verhoog aantal met nieuwe aantal
-            if (productdb.Exists(x => x.productnaam.Contains(product)))
+            if (productdb.Exists(x => x.productnaam.Contains(product.titel)))
             {
-                productdb.Find(x => x.productnaam.Contains(product)).aantal = (int.Parse(productdb.Find(x => x.productnaam.Contains(product)).aantal) + int.Parse(aantal)).ToString();
+                productdb.Find(x => x.productnaam.Contains(product.titel)).aantal = (int.Parse(productdb.Find(x => x.productnaam.Contains(product.titel)).aantal) + int.Parse(aantal)).ToString();
             }
             else
             {
-                productdb.Add(new SaleLinesItem(aantal, product, productdetails, prijs, producttype, downloadlink));
+                productdb.Add(new SaleLinesItem(aantal, product ));//product.titel, product.beschrijving, product.prijs, product.type, product.downloadlink));
             }
         }
 

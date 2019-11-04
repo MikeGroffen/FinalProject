@@ -17,17 +17,17 @@ namespace final_project
         public string producttype    { get; set; }
         public string downloadlink   { get; set; }
 
-        public SaleLinesItem(string aantal1, string productnaam1, string productdetails1, float prijs1, string producttype1, string downloadlink1)
+        public SaleLinesItem(string aantal1, ProductInformatie product)//string productnaam1, string productdetails1, float prijs1, string producttype1, string downloadlink1)
         {
             aantal = aantal1;
-            productnaam = productnaam1;
-            productdetails = productdetails1;
-            prijs = prijs1;
-            producttype = producttype1;
-            downloadlink = downloadlink1;
+            productnaam = product.titel;
+            productdetails = product.beschrijving;
+            prijs = product.prijs;
+            producttype = product.type;
+            downloadlink = product.downloadlink;
         }
 
-        public float quantitypricecalc ()
+        public float quantitypricecalc()
         {
             return int.Parse(aantal) * prijs;
         }

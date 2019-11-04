@@ -74,7 +74,7 @@ namespace final_project
                         if (int.Parse(value) > 0)
                         {
                             MessageBox.Show(value + " item(s) toegevoegd aan winkelmandje!");
-                            w.addtochart(value, p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type, p.producten[e.RowIndex].downloadlink);
+                            w.addtochart(value,p.producten[e.RowIndex] );// p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type, p.producten[e.RowIndex].downloadlink);
                         }
                         else MessageBox.Show("Ongeldig aantal. \n Aantal mag niet 0 of kleiner zijn!");
                     }
