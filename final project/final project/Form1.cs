@@ -21,7 +21,6 @@ namespace final_project
         {
             InitializeComponent();
             w = new Winkelmand();
-            //g = new Gebruiker(w.productdb);
             p = new Product();
             p.product();
             datagrid();
