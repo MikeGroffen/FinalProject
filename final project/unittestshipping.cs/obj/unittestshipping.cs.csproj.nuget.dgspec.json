@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\unittestshipping.cs\\unittestshipping.cs.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\final project\\final project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\final project\\final project.csproj",
+        "projectName": "final project",
+        "projectPath": "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\final project\\final project.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\unittestshipping.cs\\unittestshipping.cs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\unittestshipping.cs\\unittestshipping.cs.csproj",
+        "projectName": "unittestshipping.cs",
+        "projectPath": "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\unittestshipping.cs\\unittestshipping.cs.csproj",
+        "packagesPath": "C:\\Users\\Celesta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\unittestshipping.cs\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Celesta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\final project\\final project.csproj": {
+                "projectPath": "C:\\Users\\Celesta\\Documents\\GitHub\\FinalProject\\final project\\final project\\final project.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.3.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

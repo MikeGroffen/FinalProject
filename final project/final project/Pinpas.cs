@@ -25,7 +25,7 @@ namespace final_project
             {
                 Sales.ActiveForm.Close();
                 Winkelmand w = new Winkelmand();
-                w.productdb = productendb;
+                w.wm.productdb = productendb;
                 w.Visible = true;
                 w.showwinkelwagen();
             }

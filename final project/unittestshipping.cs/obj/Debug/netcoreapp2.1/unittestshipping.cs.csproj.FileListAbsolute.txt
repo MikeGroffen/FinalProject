@@ -18,3 +18,23 @@ C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\unittes
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.csproj.CopyComplete
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.dll
 C:\Users\mikeg\OneDrive\Documenten\GitHub\MSo\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.pdb
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\testhost.exe
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\testhost.dll
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\unittestshipping.cs.deps.json
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\unittestshipping.cs.runtimeconfig.json
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\unittestshipping.cs.runtimeconfig.dev.json
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\unittestshipping.cs.dll
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\unittestshipping.cs.pdb
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\final project.exe
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\final project.pdb
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\bin\Debug\netcoreapp2.1\final project.exe.config
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.csprojAssemblyReference.cache
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.csproj.CoreCompileInputs.cache
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.AssemblyInfoInputs.cache
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.AssemblyInfo.cs
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.csproj.CopyComplete
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.dll
+C:\Users\Celesta\Documents\GitHub\FinalProject\final project\unittestshipping.cs\obj\Debug\netcoreapp2.1\unittestshipping.cs.pdb

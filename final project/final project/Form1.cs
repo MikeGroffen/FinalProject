@@ -62,7 +62,7 @@ namespace final_project
         {
             int parsedValue;
 
-            //checkt of colum nummer 5 is, check of de rowindex waar we op klikken binnen de grenzen vaan de producten list is
+            //checkt of colum nummer 5 is, check of de rowindex waar we op klikken binnen de grenzen van de producten list is
             if(e.ColumnIndex == 5 && e.RowIndex != p.producten.Count + 1 && e.RowIndex != -1)
             {
                 if (dataGridView3.Rows[e.RowIndex].Cells[4].Value == null) { MessageBox.Show("Vul een aantal in!"); }
@@ -76,7 +76,7 @@ namespace final_project
                         if (int.Parse(value) > 0)
                         {
                             MessageBox.Show(value + " item(s) toegevoegd aan winkelmandje!");
-                            w.addtochart(value,p.producten[e.RowIndex]);// p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type, p.producten[e.RowIndex].downloadlink);
+                            w.wm.addtocart(value,p.producten[e.RowIndex]);// p.producten[e.RowIndex].titel, p.producten[e.RowIndex].beschrijving, p.producten[e.RowIndex].prijs, p.producten[e.RowIndex].type, p.producten[e.RowIndex].downloadlink);
                         }
                         else MessageBox.Show("Ongeldig aantal. \n Aantal mag niet 0 of kleiner zijn!");
                     }
@@ -98,9 +98,9 @@ namespace final_project
         //betalen knop, bij klikken op deze knop moet de gebruiker eerst gegevens invullen alvorens de betaling word gestart.
         private void button3_Click(object sender, EventArgs e)
         {
-            if (w.productdb.Count == 0)
+            if (w.wm.productdb.Count == 0)
             { MessageBox.Show("Geen producten in winkelmandje! \n Voeg eerst producten toe aan u winkelmandje alvorens u verder gaat."); }
-            else { g = new Gebruiker(w.productdb); g.Show(); }
+            else { g = new Gebruiker(w.wm.productdb); g.Show(); }
         }
 
        
