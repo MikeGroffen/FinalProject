@@ -28,32 +28,51 @@ namespace final_project
         private Betaling _betaling;
         List<SaleLinesItem> productendb;
         sales s = new sales();
+        Verzend v = new Verzend();
+        private bool isgeslaagd;
 
         public Sales(List<SaleLinesItem> productendb1)
         {
             InitializeComponent();
             productendb = productendb1;
         }
-        
+
+        //normaal doen we natuurlijk niet dit maar kijken we of de betaling wel echt geslaagd is
+        // in de betaalmethode zal je dan ook geen isbetalingsgeslaagd mee willen geven aangezien deze 
+        //methode nu terugstuurt of de betaling geslaagd is
+        private bool Isbetalinggeslaagd()
+        {
+            string message = "Kies of de betaling geslaagd is of niet. ja voor geslaagd, nee voor gefaald.";
+            string title = "Creditcard";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Totaalprijs: " + s.TotalPricecalc(productendb) + " Euro" + "\n" + message, title, buttons);
+            if (result == DialogResult.Yes)
+            { return true; }
+            else return false;
+        }
+
         //de paypal knop
         private void button1_Click(object sender, EventArgs e)
         {
             _betaling = new Paypal();
-            _betaling.Betaalmethode(s.TotalPricecalc(productendb),productendb);
+            isgeslaagd = _betaling.Betaalmethode(s.TotalPricecalc(productendb),productendb,Isbetalinggeslaagd());
+            v.verzend(isgeslaagd,productendb);
         }
 
         //de pinpas knop
         private void button2_Click(object sender, EventArgs e)
         {
             _betaling = new Pinpas();
-            _betaling.Betaalmethode(s.TotalPricecalc(productendb),productendb);
+            isgeslaagd =_betaling.Betaalmethode(s.TotalPricecalc(productendb), productendb, Isbetalinggeslaagd());
+            v.verzend(isgeslaagd,productendb);
         }
 
         //de creditcard knop
         private void button3_Click(object sender, EventArgs e)
         {
             _betaling = new CreditCard();
-            _betaling.Betaalmethode(s.TotalPricecalc(productendb),productendb);
+            isgeslaagd = _betaling.Betaalmethode(s.TotalPricecalc(productendb),productendb, Isbetalinggeslaagd());
+            v.verzend(isgeslaagd,productendb);
         }
 
         //terug knop

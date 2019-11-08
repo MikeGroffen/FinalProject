@@ -76,6 +76,7 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="VerificatieEmail.cs" />
+    <Compile Include="Verzend.cs" />
     <Compile Include="Verzending.cs" />
     <Compile Include="Verzendingsinformatie.cs">
       <SubType>Form</SubType>

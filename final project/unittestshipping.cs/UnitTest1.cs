@@ -11,13 +11,11 @@ namespace unittestshipping.cs
         [TestMethod]
         public void TestSuccesvolBetalen()
         {
-            CreditCard creditcard = new CreditCard();
+            Betaling creditcard = new CreditCard();
             bool resultaat = true;
             List<SaleLinesItem> productdb = new List<SaleLinesItem>();
-            creditcard.Resultaat(resultaat, productdb);
-
-            bool test = creditcard.geslaagd;
-            Assert.IsTrue(test);
+            bool test = creditcard.Betaalmethode(10.0f, productdb, true);
+            Assert.AreEqual(resultaat, test,"betaling is geslaagd terwijl dat niet zo is.");
         }
 
         [TestMethod]
