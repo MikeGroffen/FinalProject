@@ -10,6 +10,7 @@ namespace final_project
     {
         public int fysiekeproducten;
         public int digitaleproducten;
+
         //kijkt of we digitale of fysieke producten hebben creert nieuwe decoratorconstrucor dysiek of digitaal. begint met constructor verificatieEmail.
         public Verzendingsinterface verzending(int i, List<SaleLinesItem> productendb)
         {
@@ -29,16 +30,19 @@ namespace final_project
             return new VerificatieEmail();
         }
 
+        //voor de unit test
         public void FysiekProduct()
         {
             fysiekeproducten++;
         }
 
+        //voor de unit test
         public void DigitaalProduct()
         {
             digitaleproducten++;
         }
-        public void verzend(bool isgeslaagd,List<SaleLinesItem> productendb)
+
+        public void verzend(bool isgeslaagd, List<SaleLinesItem> productendb)
         {
             if (isgeslaagd)
             {

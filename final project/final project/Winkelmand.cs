@@ -32,28 +32,12 @@ namespace final_project
     public partial class Winkelmand : Form
     {
         public winkelmand wm = new winkelmand();
+
         public Winkelmand()
         {
             InitializeComponent();
         }
-
-        //public List<SaleLinesItem> productdb = new List<SaleLinesItem>();
-
-        /*public void addtocart(string aantal, ProductInformatie product)// string product, string productdetails, float prijs, string producttype, string downloadlink)
-        {
-            if (int.Parse(aantal) == 0)
-                return;
-            //kijkt of we het product al in het winkelmandje hebben, zoja verhoog aantal met nieuwe aantal
-            if (productdb.Exists(x => x.productnaam.Contains(product.titel)))
-            {
-                productdb.Find(x => x.productnaam.Contains(product.titel)).aantal = (int.Parse(productdb.Find(x => x.productnaam.Contains(product.titel)).aantal) + int.Parse(aantal)).ToString();
-            }
-            else
-            {
-                productdb.Add(new SaleLinesItem(aantal, product ));
-            }
-        }*/
-
+        
         //laad de tabel met de producten in de winkelwagen
         public void showwinkelwagen()
         {
