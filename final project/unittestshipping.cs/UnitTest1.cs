@@ -15,7 +15,7 @@ namespace unittestshipping.cs
             bool resultaat = true;
             List<SaleLinesItem> productdb = new List<SaleLinesItem>();
             bool test = creditcard.Betaalmethode(10.0f, productdb, true);
-            Assert.AreEqual(resultaat, test,"betaling is geslaagd terwijl dat niet zo is.");
+            Assert.AreEqual(resultaat, test, "betaling is geslaagd terwijl dat niet zo is.");
         }
 
         [TestMethod]
@@ -67,6 +67,66 @@ namespace unittestshipping.cs
             float actual = sale.TotalPricecalc(productdb);
 
             Assert.AreEqual(expected, actual, 0.001, "Verzendkosten zijn er niet bij toegevoegd. test failed");
+        }
+
+        [TestMethod]
+        public void TestAantalGelijkeProducten()
+        {
+            int expected = 5;
+            int a = 2;
+            string aantal = a.ToString();
+            int b = 3;
+            string aantal2 = b.ToString();
+
+            List<SaleLinesItem> testproductdb = new List<SaleLinesItem>();
+            ProductInformatie product1 = new ProductInformatie("testitem1", "testbeschrijving1", 10.00f, "Fysiek", "");
+
+            winkelmand w = new winkelmand();
+            w.productdb = testproductdb;
+            w.addtocart(aantal, product1);
+            w.addtocart(aantal2, product1);
+
+            int actual = int.Parse(testproductdb.Find(x => x.productnaam.Contains(product1.titel)).aantal);
+
+            Assert.AreEqual(expected, actual, 0.001, "Aantal producten is onjuist. test failed");
+        }
+
+        [TestMethod]
+        public void TestAantalVerschillendeFysiekeProducten()
+        {
+            int expected = 2;
+            Verzend v = new Verzend();
+            int i = 0;
+            List<SaleLinesItem> testproductdb = new List<SaleLinesItem>();
+            ProductInformatie product1 = new ProductInformatie("testitem1", "testbeschrijving1", 10.00f, "Fysiek", "");
+            testproductdb.Add(new SaleLinesItem("1", product1));
+            ProductInformatie product2 = new ProductInformatie("testitem2", "testbeschrijving2", 10.00f, "Fysiek", "");
+            testproductdb.Add(new SaleLinesItem("1", product2));
+            ProductInformatie product3 = new ProductInformatie("testitem3", "testbeschrijving3", 10.00f, "Digitaal", "");
+            testproductdb.Add(new SaleLinesItem("1", product3));
+            v.verzending(i, testproductdb);
+
+            int actual = v.fysiekeproducten;
+            Assert.AreEqual(expected, actual, 0.001, "Aantal producten is onjuist. test failed");
+        }
+
+        [TestMethod]
+        public void TestAantalVerschillendeDigitaleProducten()
+        {
+            int expected = 2;
+            Verzend v = new Verzend();
+            int i = 0;
+            List<SaleLinesItem> testproductdb = new List<SaleLinesItem>();
+            ProductInformatie product1 = new ProductInformatie("testitem1", "testbeschrijving1", 10.00f, "Digitaal", "");
+            testproductdb.Add(new SaleLinesItem("1", product1));
+            ProductInformatie product2 = new ProductInformatie("testitem2", "testbeschrijving2", 10.00f, "Fysiek", "");
+            testproductdb.Add(new SaleLinesItem("1", product2));
+            ProductInformatie product3 = new ProductInformatie("testitem3", "testbeschrijving3", 10.00f, "Digitaal", "");
+            testproductdb.Add(new SaleLinesItem("1", product3));
+            v.verzending(i, testproductdb);
+
+            int actual = v.digitaleproducten;
+            Assert.AreEqual(expected, actual, 0.001, "Aantal producten is onjuist. test failed");
         }
     }
 }

@@ -6,25 +6,38 @@ using System.Threading.Tasks;
 
 namespace final_project
 {
-    class Verzend
+    public class Verzend
     {
+        public int fysiekeproducten;
+        public int digitaleproducten;
         //kijkt of we digitale of fysieke producten hebben creert nieuwe decoratorconstrucor dysiek of digitaal. begint met constructor verificatieEmail.
-        private Verzendingsinterface verzending(int i, List<SaleLinesItem> productendb)
+        public Verzendingsinterface verzending(int i, List<SaleLinesItem> productendb)
         {
             if (i < productendb.Count)
             {
                 if (productendb[i].producttype == "Fysiek")
                 {
+                    FysiekProduct();
                     return new Fysiekeverzending(verzending(i + 1, productendb), productendb[i]);
                 }
                 if (productendb[i].producttype == "Digitaal")
                 {
+                    DigitaalProduct();
                     return new Digitaleverzending(verzending(i + 1, productendb), productendb[i]);
                 }
             }
             return new VerificatieEmail();
         }
 
+        public void FysiekProduct()
+        {
+            fysiekeproducten++;
+        }
+
+        public void DigitaalProduct()
+        {
+            digitaleproducten++;
+        }
         public void verzend(bool isgeslaagd,List<SaleLinesItem> productendb)
         {
             if (isgeslaagd)
