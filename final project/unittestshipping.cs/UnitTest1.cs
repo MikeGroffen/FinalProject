@@ -70,6 +70,38 @@ namespace unittestshipping.cs
         }
 
         [TestMethod]
+        public void TestShippingEenmalig()
+        {
+            float expected = 22.50f;
+
+            List<SaleLinesItem> productdb = new List<SaleLinesItem>();
+            ProductInformatie product1 = new ProductInformatie("testitem1", "testbeschrijving1", 10.00f, "Fysiek", "");
+            productdb.Add(new SaleLinesItem("1", product1));
+            ProductInformatie product2 = new ProductInformatie("testitem2", "testbeschrijving2", 10.00f, "Fysiek", "");
+            productdb.Add(new SaleLinesItem("1", product1));
+
+            sales sale = new sales();
+            float actual = sale.TotalPricecalc(productdb);
+
+            Assert.AreEqual(expected, actual, 0.001, "Verzendkosten zijn dubbel toegevoegd. test failed");
+        }
+
+        [TestMethod]
+        public void TestAantalPrijsVerhouding()
+        {
+            float expected = 30.0f;
+
+            List<SaleLinesItem> productdb = new List<SaleLinesItem>();
+            ProductInformatie product1 = new ProductInformatie("testitem1", "testbeschrijving1", 10.00f, "Digitaal", "");
+            productdb.Add(new SaleLinesItem("3", product1));
+
+            sales sale = new sales();
+            float actual = sale.TotalPricecalc(productdb);
+
+            Assert.AreEqual(expected, actual, 0.001, "De prijs is niet keer het aantal producten gedaan. test failed");
+        }
+
+        [TestMethod]
         public void TestAantalGelijkeProducten()
         {
             int expected = 5;
