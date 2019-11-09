@@ -21,10 +21,10 @@ namespace final_project
             verzend.StuurEmail();
         }
 
-        public string stringgenerator()
+        public string stringgenerator(int Seed)
         {
             StringBuilder builder = new StringBuilder();
-            Random random = new Random();
+            Random random = new Random(Seed);
             char ch;
             for (int i = 0; i < 24; i++)
             {

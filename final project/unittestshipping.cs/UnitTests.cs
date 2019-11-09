@@ -3,10 +3,10 @@ using final_project;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace unittestshipping.cs
+namespace UnitTesting.cs
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTests
     {
         [TestMethod]
         public void TestSuccesvolBetalen()
@@ -14,7 +14,17 @@ namespace unittestshipping.cs
             Betaling creditcard = new CreditCard();
             bool resultaat = true;
             List<SaleLinesItem> productdb = new List<SaleLinesItem>();
-            bool test = creditcard.Betaalmethode(10.0f, productdb, true);
+            bool test = creditcard.Betaalmethode(10.0f, productdb, resultaat);
+            Assert.AreEqual(resultaat, test, "betaling is niet geslaagd terwijl dat wel zo is.");
+        }
+
+        [TestMethod]
+        public void TestOnsuccesvolBetalen()
+        {
+            Betaling creditcard = new CreditCard();
+            bool resultaat = false;
+            List<SaleLinesItem> productdb = new List<SaleLinesItem>();
+            bool test = creditcard.Betaalmethode(10.0f, productdb, resultaat);
             Assert.AreEqual(resultaat, test, "betaling is geslaagd terwijl dat niet zo is.");
         }
 
@@ -131,11 +141,11 @@ namespace unittestshipping.cs
             int i = 0;
             List<SaleLinesItem> testproductdb = new List<SaleLinesItem>();
             ProductInformatie product1 = new ProductInformatie("testitem1", "testbeschrijving1", 10.00f, "Fysiek", "");
-            testproductdb.Add(new SaleLinesItem("1", product1));
+            testproductdb.Add(new SaleLinesItem("4", product1));
             ProductInformatie product2 = new ProductInformatie("testitem2", "testbeschrijving2", 10.00f, "Fysiek", "");
-            testproductdb.Add(new SaleLinesItem("1", product2));
+            testproductdb.Add(new SaleLinesItem("3", product2));
             ProductInformatie product3 = new ProductInformatie("testitem3", "testbeschrijving3", 10.00f, "Digitaal", "");
-            testproductdb.Add(new SaleLinesItem("1", product3));
+            testproductdb.Add(new SaleLinesItem("2", product3));
             v.verzending(i, testproductdb);
 
             int actual = v.fysiekeproducten;
@@ -150,11 +160,11 @@ namespace unittestshipping.cs
             int i = 0;
             List<SaleLinesItem> testproductdb = new List<SaleLinesItem>();
             ProductInformatie product1 = new ProductInformatie("testitem1", "testbeschrijving1", 10.00f, "Digitaal", "");
-            testproductdb.Add(new SaleLinesItem("1", product1));
+            testproductdb.Add(new SaleLinesItem("3", product1));
             ProductInformatie product2 = new ProductInformatie("testitem2", "testbeschrijving2", 10.00f, "Fysiek", "");
-            testproductdb.Add(new SaleLinesItem("1", product2));
+            testproductdb.Add(new SaleLinesItem("6", product2));
             ProductInformatie product3 = new ProductInformatie("testitem3", "testbeschrijving3", 10.00f, "Digitaal", "");
-            testproductdb.Add(new SaleLinesItem("1", product3));
+            testproductdb.Add(new SaleLinesItem("2", product3));
             v.verzending(i, testproductdb);
 
             int actual = v.digitaleproducten;
